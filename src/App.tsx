@@ -3,16 +3,26 @@ import './App.css';
 import RefExample from './RefExample';
 import ImperativeHandle from './ImperativeHandleExample';
 import HigherOrderComponentExample from './HigherOrderComponent';
+import {RecursiveFolder} from './RecursiveFolder';
+import {ThemeProvider} from './ThemeContextProvider.jsx';
+import List from './List';
+import {ToggleTheme} from './ToggleTheme';
 
 function App() {
   return (
     <>
+    <ThemeProvider>
       <Greeting name="Sushil" />
       <br />
       <GreetingClass name="Kumar" />
       <RefExample />
       <ImperativeHandle />
       <HigherOrderComponentExample />
+      <br/>
+      <RecursiveFolder />
+      <List/>
+      <ToggleTheme />
+      </ThemeProvider>
     </>
   );
 }
